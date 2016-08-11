@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://remoteservice.mall.mk.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="MContractRemoteServiceService" targetNamespace="http://remoteservice.mall.mk.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://remoteservice.mall.mk.com/">
+      <xsd:element name="contract" type="tns:contract" />
+      <xsd:complexType name="contract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sMcontract" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="contractResponse" type="tns:contractResponse" />
+      <xsd:complexType name="contractResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="draft" type="tns:draft" />
+      <xsd:complexType name="draft">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sMcontract" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="draftResponse" type="tns:draftResponse" />
+      <xsd:complexType name="draftResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="contractstatus" type="tns:contractstatus" />
+      <xsd:complexType name="contractstatus">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sMcontract" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="contractstatusResponse" type="tns:contractstatusResponse" />
+      <xsd:complexType name="contractstatusResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="draftResponse">
+    <wsdl:part name="parameters" element="tns:draftResponse" />
+  </wsdl:message>
+  <wsdl:message name="contract">
+    <wsdl:part name="parameters" element="tns:contract" />
+  </wsdl:message>
+  <wsdl:message name="draft">
+    <wsdl:part name="parameters" element="tns:draft" />
+  </wsdl:message>
+  <wsdl:message name="contractResponse">
+    <wsdl:part name="parameters" element="tns:contractResponse" />
+  </wsdl:message>
+  <wsdl:message name="contractstatus">
+    <wsdl:part name="parameters" element="tns:contractstatus" />
+  </wsdl:message>
+  <wsdl:message name="contractstatusResponse">
+    <wsdl:part name="parameters" element="tns:contractstatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MContractRemoteService">
+    <wsdl:operation name="contract">
+      <wsdl:input name="contract" message="tns:contract" />
+      <wsdl:output name="contractResponse" message="tns:contractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="draft">
+      <wsdl:input name="draft" message="tns:draft" />
+      <wsdl:output name="draftResponse" message="tns:draftResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="contractstatus">
+      <wsdl:input name="contractstatus" message="tns:contractstatus" />
+      <wsdl:output name="contractstatusResponse" message="tns:contractstatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MContractRemoteServiceServiceSoapBinding" type="tns:MContractRemoteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="contract">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="contract">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="contractResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="draft">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="draft">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="draftResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="contractstatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="contractstatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="contractstatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MContractRemoteServiceService">
+    <wsdl:port name="MContractRemoteServicePort" binding="tns:MContractRemoteServiceServiceSoapBinding">
+      <soap:address location="http://hzgpmall.top/gpmall/ws/MContractService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

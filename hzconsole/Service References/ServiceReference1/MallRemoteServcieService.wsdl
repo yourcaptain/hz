@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://remoteservice.mall.mk.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="MallRemoteServcieService" targetNamespace="http://remoteservice.mall.mk.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://remoteservice.mall.mk.com/">
+      <xsd:element name="exchangeGoodsprice" type="tns:exchangeGoodsprice" />
+      <xsd:complexType name="exchangeGoodsprice">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sMGoodsprice" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeGoodspriceResponse" type="tns:exchangeGoodspriceResponse" />
+      <xsd:complexType name="exchangeGoodspriceResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="showOrder" type="tns:showOrder" />
+      <xsd:complexType name="showOrder">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="orderguid" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="showOrderResponse" type="tns:showOrderResponse" />
+      <xsd:complexType name="showOrderResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="showOrderstatus" type="tns:showOrderstatus" />
+      <xsd:complexType name="showOrderstatus">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sMOrderDetail" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="showOrderstatusResponse" type="tns:showOrderstatusResponse" />
+      <xsd:complexType name="showOrderstatusResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeGoodsImg" type="tns:exchangeGoodsImg" />
+      <xsd:complexType name="exchangeGoodsImg">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeGoodsImgResponse" type="tns:exchangeGoodsImgResponse" />
+      <xsd:complexType name="exchangeGoodsImgResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeOrder" type="tns:exchangeOrder" />
+      <xsd:complexType name="exchangeOrder">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeOrderResponse" type="tns:exchangeOrderResponse" />
+      <xsd:complexType name="exchangeOrderResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="orderTime" type="tns:orderTime" />
+      <xsd:complexType name="orderTime">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="orderTimeResponse" type="tns:orderTimeResponse" />
+      <xsd:complexType name="orderTimeResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeGoodsURL" type="tns:exchangeGoodsURL" />
+      <xsd:complexType name="exchangeGoodsURL">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeGoodsURLResponse" type="tns:exchangeGoodsURLResponse" />
+      <xsd:complexType name="exchangeGoodsURLResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="goodsOnsale" type="tns:goodsOnsale" />
+      <xsd:complexType name="goodsOnsale">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sGoodsOnsale" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="goodsOnsaleResponse" type="tns:goodsOnsaleResponse" />
+      <xsd:complexType name="goodsOnsaleResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeGoods" type="tns:exchangeGoods" />
+      <xsd:complexType name="exchangeGoods">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sMGoods" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeGoodsResponse" type="tns:exchangeGoodsResponse" />
+      <xsd:complexType name="exchangeGoodsResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeOrg" type="tns:exchangeOrg" />
+      <xsd:complexType name="exchangeOrg">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="exchangeOrgResponse" type="tns:exchangeOrgResponse" />
+      <xsd:complexType name="exchangeOrgResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="orderstatus" type="tns:orderstatus" />
+      <xsd:complexType name="orderstatus">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="sTicket" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sMOrderDetail" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="orderstatusResponse" type="tns:orderstatusResponse" />
+      <xsd:complexType name="orderstatusResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="showOrder">
+    <wsdl:part name="parameters" element="tns:showOrder" />
+  </wsdl:message>
+  <wsdl:message name="exchangeGoodsImgResponse">
+    <wsdl:part name="parameters" element="tns:exchangeGoodsImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="exchangeOrderResponse">
+    <wsdl:part name="parameters" element="tns:exchangeOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="showOrderstatus">
+    <wsdl:part name="parameters" element="tns:showOrderstatus" />
+  </wsdl:message>
+  <wsdl:message name="exchangeGoodsImg">
+    <wsdl:part name="parameters" element="tns:exchangeGoodsImg" />
+  </wsdl:message>
+  <wsdl:message name="exchangeOrder">
+    <wsdl:part name="parameters" element="tns:exchangeOrder" />
+  </wsdl:message>
+  <wsdl:message name="goodsOnsaleResponse">
+    <wsdl:part name="parameters" element="tns:goodsOnsaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="exchangeGoodspriceResponse">
+    <wsdl:part name="parameters" element="tns:exchangeGoodspriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="orderTime">
+    <wsdl:part name="parameters" element="tns:orderTime" />
+  </wsdl:message>
+  <wsdl:message name="exchangeGoodsURL">
+    <wsdl:part name="parameters" element="tns:exchangeGoodsURL" />
+  </wsdl:message>
+  <wsdl:message name="exchangeGoodsURLResponse">
+    <wsdl:part name="parameters" element="tns:exchangeGoodsURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="exchangeGoods">
+    <wsdl:part name="parameters" element="tns:exchangeGoods" />
+  </wsdl:message>
+  <wsdl:message name="exchangeGoodsprice">
+    <wsdl:part name="parameters" element="tns:exchangeGoodsprice" />
+  </wsdl:message>
+  <wsdl:message name="exchangeOrgResponse">
+    <wsdl:part name="parameters" element="tns:exchangeOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="showOrderResponse">
+    <wsdl:part name="parameters" element="tns:showOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="exchangeGoodsResponse">
+    <wsdl:part name="parameters" element="tns:exchangeGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="goodsOnsale">
+    <wsdl:part name="parameters" element="tns:goodsOnsale" />
+  </wsdl:message>
+  <wsdl:message name="showOrderstatusResponse">
+    <wsdl:part name="parameters" element="tns:showOrderstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="orderTimeResponse">
+    <wsdl:part name="parameters" element="tns:orderTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="exchangeOrg">
+    <wsdl:part name="parameters" element="tns:exchangeOrg" />
+  </wsdl:message>
+  <wsdl:message name="orderstatusResponse">
+    <wsdl:part name="parameters" element="tns:orderstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="orderstatus">
+    <wsdl:part name="parameters" element="tns:orderstatus" />
+  </wsdl:message>
+  <wsdl:portType name="MallRemoteServcie">
+    <wsdl:operation name="exchangeGoodsprice">
+      <wsdl:input name="exchangeGoodsprice" message="tns:exchangeGoodsprice" />
+      <wsdl:output name="exchangeGoodspriceResponse" message="tns:exchangeGoodspriceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="showOrder">
+      <wsdl:input name="showOrder" message="tns:showOrder" />
+      <wsdl:output name="showOrderResponse" message="tns:showOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="showOrderstatus">
+      <wsdl:input name="showOrderstatus" message="tns:showOrderstatus" />
+      <wsdl:output name="showOrderstatusResponse" message="tns:showOrderstatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="exchangeGoodsImg">
+      <wsdl:input name="exchangeGoodsImg" message="tns:exchangeGoodsImg" />
+      <wsdl:output name="exchangeGoodsImgResponse" message="tns:exchangeGoodsImgResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="exchangeOrder">
+      <wsdl:input name="exchangeOrder" message="tns:exchangeOrder" />
+      <wsdl:output name="exchangeOrderResponse" message="tns:exchangeOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="orderTime">
+      <wsdl:input name="orderTime" message="tns:orderTime" />
+      <wsdl:output name="orderTimeResponse" message="tns:orderTimeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="exchangeGoodsURL">
+      <wsdl:input name="exchangeGoodsURL" message="tns:exchangeGoodsURL" />
+      <wsdl:output name="exchangeGoodsURLResponse" message="tns:exchangeGoodsURLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="goodsOnsale">
+      <wsdl:input name="goodsOnsale" message="tns:goodsOnsale" />
+      <wsdl:output name="goodsOnsaleResponse" message="tns:goodsOnsaleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="exchangeGoods">
+      <wsdl:input name="exchangeGoods" message="tns:exchangeGoods" />
+      <wsdl:output name="exchangeGoodsResponse" message="tns:exchangeGoodsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="exchangeOrg">
+      <wsdl:input name="exchangeOrg" message="tns:exchangeOrg" />
+      <wsdl:output name="exchangeOrgResponse" message="tns:exchangeOrgResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="orderstatus">
+      <wsdl:input name="orderstatus" message="tns:orderstatus" />
+      <wsdl:output name="orderstatusResponse" message="tns:orderstatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MallRemoteServcieServiceSoapBinding" type="tns:MallRemoteServcie">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="exchangeGoodsprice">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="exchangeGoodsprice">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="exchangeGoodspriceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="showOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="showOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showOrderstatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="showOrderstatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="showOrderstatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exchangeGoodsImg">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="exchangeGoodsImg">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="exchangeGoodsImgResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exchangeOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="exchangeOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="exchangeOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderTime">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="orderTime">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="orderTimeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exchangeGoodsURL">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="exchangeGoodsURL">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="exchangeGoodsURLResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goodsOnsale">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="goodsOnsale">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="goodsOnsaleResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exchangeGoods">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="exchangeGoods">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="exchangeGoodsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exchangeOrg">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="exchangeOrg">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="exchangeOrgResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderstatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="orderstatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="orderstatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MallRemoteServcieService">
+    <wsdl:port name="MallRemoteServciePort" binding="tns:MallRemoteServcieServiceSoapBinding">
+      <soap:address location="http://hzgpmall.top/gpmall/ws/MallService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
